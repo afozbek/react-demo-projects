@@ -15,19 +15,19 @@ class Body extends React.Component {
         this.BASE_URL = 'https://cors.io/?https://api.cryptonator.com/api/ticker/';
         this.chartRef = null;
         this.state = {
-            btcusd: '-',
-            ltcusd: '-',
-            ethusd: '-',
+            btcusd: '-', //bitcoin
+            ltcusd: '-', //litecoin
+            ethusd: '-',    //etherium
             showChart: false,
             initValue: 0,
             dataSource: {
                 "chart": {
                     "caption": "Bitcoin Ticker",
-                    "subCaption": "",
+                    "subCaption": "Furkan Ozbek",
                     "xAxisName": "Local Time",
                     "yAxisName": "USD",
                     "numberPrefix": "$",
-                    "refreshinterval": "2",
+                    "refreshinterval": "3",
                     "slantLabels": "1",
                     "numdisplaysets": "10",
                     "labeldisplay": "rotate",
@@ -74,7 +74,11 @@ class Body extends React.Component {
                 });
         }, 2000);
     }
-
+    /**
+     * 
+     * @param {String} conversion Değişiklik Tipi
+     * @param {String} prop bitcoin mi?, litecoin mi?, etherium mu?
+     */
 
     getDataFor(conversion, prop) {
         fetch(this.BASE_URL + conversion, {
@@ -121,10 +125,7 @@ class Body extends React.Component {
 
     getChartRef(chart) {
         this.chartRef = chart;
-
-
     }
-
 
     render() {
         return (
@@ -134,10 +135,6 @@ class Body extends React.Component {
                         <PriceCard header="Bitcoin(BTC)" src={'/bitcoin.png'} alt="fireSpot" label="(Price in USD)" value={this.state.btcusd} />
                         <PriceCard header="Litecoin(LTC)" src={'/litecoin.png'} alt="fireSpot" label="(Price in USD)" value={this.state.ltcusd} />
                         <PriceCard header="Ethereum(ETH)" src={'/ethereum.png'} alt="fireSpot" label="(Price in USD)" value={this.state.ethusd} />
-
-
-
-
                     </div>
                 </div>
                 <div className="col-12">
