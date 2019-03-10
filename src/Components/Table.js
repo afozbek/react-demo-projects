@@ -3,12 +3,15 @@ import TableHeader from './TableHeader';
 import TableBody from './TableBody';
 export default class Table extends Component {
     render() {
-        const { friendsData } = this.props;
+        const { friendsData, removeCharacter } = this.props;
 
         return (
             <table>
                 <TableHeader />
-                <TableBody friendsData={friendsData} />
+                <TableBody
+                    friendsData={friendsData}
+                    removeCharacter={removeCharacter}
+                />
             </table>
         );
     }
