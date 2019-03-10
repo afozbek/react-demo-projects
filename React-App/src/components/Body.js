@@ -1,12 +1,10 @@
 import React from 'react';
 import PriceCard from './PriceCard';
-//import axios from 'axios';
 import FusionCharts from 'fusioncharts';
 import Charts from 'fusioncharts/fusioncharts.charts';
 import Widgets from 'fusioncharts/fusioncharts.widgets';
 import ReactFC from 'react-fusioncharts';
 import FusionTheme from 'fusioncharts/themes/fusioncharts.theme.fusion';
-
 ReactFC.fcRoot(FusionCharts, Charts, Widgets, FusionTheme);
 
 class Body extends React.Component {
@@ -63,14 +61,18 @@ class Body extends React.Component {
         this.getDataFor('eth-usd', 'ethusd');
     }
 
+    //Update the data every 2s
     startUpdatingData() {
         setInterval(() => {
             fetch(this.BASE_URL + 'btc-usd')
-                .then(res => res.json())
-                .then(d => {
+                .then(res => res.status(200).json())
+                .then(data => {
                     let x_axis = this.clientDateTime();
-                    let y_axis = d.ticker.price;
+                    let y_axis = data.ticker.price;
                     this.chartRef.feedData("&label=" + x_axis + "&value=" + y_axis);
+                })
+                .catch(err => {
+                    console.log(err);
                 });
         }, 2000);
     }
@@ -112,7 +114,9 @@ class Body extends React.Component {
         return (num <= 9) ? ("0" + num) : num;
     }
 
-
+    /**
+     * @returns {Date} Şimdiki Zaman
+     */
     clientDateTime() {
         var date_time = new Date();
         var curr_hour = date_time.getHours();
