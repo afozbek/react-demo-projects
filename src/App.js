@@ -3,9 +3,7 @@ import Table from './Components/Table';
 import Form from './Components/Form';
 class App extends React.Component {
     state = {
-        canlarim: [
-
-        ]
+        canlarim: []
     };
 
 
