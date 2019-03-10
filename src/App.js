@@ -1,20 +1,10 @@
 import React from 'react';
 import Table from './Components/Table';
+import Form from './Components/Form';
 class App extends React.Component {
     state = {
         canlarim: [
-            {
-                'name': 'Sena',
-                'proximity': 'Lover & Very Close Friend'
-            },
-            {
-                'name': 'Silan',
-                'proximity': 'Very Close Friend'
-            },
-            {
-                'name': 'Yunus Emre',
-                'proximity': 'Very Close Friend'
-            }
+
         ]
     };
 
@@ -32,6 +22,11 @@ class App extends React.Component {
             })
         })
     }
+    //onceki butun arkadaslar + yeni eklenen
+    handleSubmit = character => {
+        this.setState({ canlarim: [...this.state.canlarim, character] })
+    }
+
     render() {
         return (
             <div className="container">
@@ -39,6 +34,7 @@ class App extends React.Component {
                     friendsData={this.state.canlarim}
                     removeCharacter={this.removeCharacter}
                 />
+                <Form handleSubmit={this.handleSubmit} />
             </div>
         );
     }
