@@ -1,11 +1,12 @@
 import React from 'react';
-import Timer from './Components/Timer';
+import Table from './Components/Table';
 class App extends React.Component {
-  render() {
-    return (
-      <Timer />
-    );
-  }
+    render() {
+        return (
+            <div className="App">
+                <Table />
+            </div>
+        );
+    }
 }
-
 export default App;
