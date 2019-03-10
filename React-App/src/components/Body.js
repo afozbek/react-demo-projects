@@ -5,6 +5,7 @@ import Charts from 'fusioncharts/fusioncharts.charts';
 import Widgets from 'fusioncharts/fusioncharts.widgets';
 import ReactFC from 'react-fusioncharts';
 import FusionTheme from 'fusioncharts/themes/fusioncharts.theme.fusion';
+
 ReactFC.fcRoot(FusionCharts, Charts, Widgets, FusionTheme);
 
 class Body extends React.Component {
@@ -21,11 +22,11 @@ class Body extends React.Component {
             dataSource: {
                 "chart": {
                     "caption": "Bitcoin Ticker",
-                    "subCaption": "Furkan Ozbek",
+                    "subCaption": "",
                     "xAxisName": "Local Time",
                     "yAxisName": "USD",
                     "numberPrefix": "$",
-                    "refreshinterval": "3",
+                    "refreshinterval": "2",
                     "slantLabels": "1",
                     "numdisplaysets": "10",
                     "labeldisplay": "rotate",
@@ -65,7 +66,7 @@ class Body extends React.Component {
     startUpdatingData() {
         setInterval(() => {
             fetch(this.BASE_URL + 'btc-usd')
-                .then(res => res.status(200).json())
+                .then(res => res.json())
                 .then(data => {
                     let x_axis = this.clientDateTime();
                     let y_axis = data.ticker.price;
