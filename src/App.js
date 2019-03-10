@@ -1,9 +1,9 @@
 import React from 'react';
-
+import Todo from './Components/Todo';
 class App extends React.Component {
   render() {
     return (
-      <h1>Furkan Ozbek</h1>
+      <Todo />
     );
   }
 }
