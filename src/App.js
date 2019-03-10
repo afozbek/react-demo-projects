@@ -6,7 +6,6 @@ class App extends React.Component {
         canlarim: []
     };
 
-
     /**
      * @param {Number} index
      * @returns {Array} Removed index Array
