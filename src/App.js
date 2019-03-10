@@ -1,9 +1,9 @@
 import React from 'react';
-import Todo from './Components/Todo';
+import Timer from './Components/Timer';
 class App extends React.Component {
   render() {
     return (
-      <Todo />
+      <Timer />
     );
   }
 }
