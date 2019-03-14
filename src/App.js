@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import Deneme from './Components/Deneme';
+import Clock from './Components/Clock';
 class App extends Component {
 
     render() {
         return (
-            <Deneme name='Furkan' />
+            <div>
+                <Clock />
+            </div>
         );
     }
 }

@@ -4,6 +4,9 @@ import App from './App';
 import './index.css';
 
 //get the App class from App and place it inside root 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+    <App />, document.getElementById('root')
+);
+// ReactDOM.render(<App />, document.getElementById('root'));
 
 
