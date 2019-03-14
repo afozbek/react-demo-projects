@@ -5,3 +5,4 @@
    - > [Object Destructring ile Ilgili Onemli bir Makale](https://medium.com/@bretdoucette/understanding-this-setstate-name-value-a5ef7b4ea2b4)
 
    - > [Emmet Syntax Docs](https://docs.emmet.io/abbreviations/syntax/)
+   - ***Note*: Always start component names with a capital letter.**
