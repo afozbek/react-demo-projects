@@ -8,3 +8,4 @@
 - ***Note*: Always start component names with a capital letter.**
 - `Understanding SetState`
   - > [İlgili Makale](https://css-tricks.com/understanding-react-setstate/)
+- [`Stateful Stateless & Lifecyle React`](https://reactjs.org/docs/state-and-lifecycle.html)
