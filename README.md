@@ -14,3 +14,12 @@
   - You can pass an object or a function to setState()
   - Pass a function when you can to update state multiple times
   - Do not depend on this.state immediately after calling setState() and make use of the updater function instead.
+ - Random data oluşturma kütüphanesi **Faker Js**
+   - Github reposu için [buraya](https://github.com/marak/Faker.js/) tıklayabilirsiniz.
+ ```html
+ <!--faker.image.avatar() fonksiyonu ile hızlıca random resim alma-->
+ <a href="#" className="avatar">
+    <img src={faker.image.avatar()} alt="avatar" />
+</a>
+ ```
+ 

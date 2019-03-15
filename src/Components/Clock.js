@@ -28,8 +28,8 @@ export default class Clock extends Component {
     }
     render() {
         return (
-            <div>
-                <h1>Hello, world!</h1>
+            <div class="container" style={{ backgroundColor: "red", border: "1px solid red", marginRight: "15px" }}>
+                <h1 style={{ color: "white" }}>Hello, world!</h1>
                 <FormattedDate date={new Date()} />
             </div>
         )
