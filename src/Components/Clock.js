@@ -3,11 +3,10 @@ import FormattedDate from './FormattedDate'
 export default class Clock extends Component {
     constructor(props) {
         super(props);
-        this.state = { date: new Date() };
+        this.state = { date: new Date(), furkan: 100 };
     }
     // Dom elementi renderladığımız anda gerçekleşir
     componentDidMount() {
-        console.log('Furkan');
         this.timerID = setInterval(() => this.tick(), 1000);
     }
     //Tanımlı fonksiyonumuz state imizi güncellemek için
@@ -16,6 +15,12 @@ export default class Clock extends Component {
             date: new Date()
         })
     }
+    getFurkan() {
+        this.setState((prevState) => {
+            return { furkan: prevState.furkan + 100 }
+        })
+    }
+
     // Dom elementi yok olmadan önceki anda gerçekleşir
     componentWillUnmount() {
         console.log('Faruk');
