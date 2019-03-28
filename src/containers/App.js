@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import classes from './App.css';
-import Person from '../components/Persons/Person/Person';
+import Persons from '../components/Persons/Persons';
+import Cockpit from '../components/Cockpit/Cockpit';
 
 class App extends Component {
   state = {
@@ -11,7 +12,6 @@ class App extends Component {
     ],
     showPersons: true
   }
-
   onNameChange = (e, id) => {
     const personIndex = this.state.persons.findIndex(p => {
       return p.id === id;
@@ -31,7 +31,6 @@ class App extends Component {
   deletePersonHandler = (personIndex) => {
     // const persons = this.state.persons.slice();
     const persons = [...this.state.persons];
-    console.log(persons.length)
     persons.splice(personIndex, 1);
     this.setState({ persons: persons })
   }
@@ -44,47 +43,27 @@ class App extends Component {
   }
   render() {
     let persons = null;
-    let btnClass = '';
     if (this.state.showPersons) {
       persons = (
-        <div>
-          {
-            this.state.persons.map((person, index) => {
-              return (
-                <Person
-                  click={() => this.deletePersonHandler(index)}
-                  name={person.name}
-                  age={person.age}
-                  change={(e) => this.onNameChange(e, person.id)}
-                >{person.id}</Person>
-              );
-            })
-          }
-        </div>
+        < Persons
+          persons={this.state.persons}
+          clicked={this.deletePersonHandler}
+          changed={this.onNameChange}
+        />
       );
-      btnClass = classes.Red;
     }
 
-    const classes_ = [];
-    if (this.state.persons.length <= 2) {
-      classes_.push(classes.red); // classes = ['red]
-    }
-    if (this.state.persons.length <= 1) {
-      classes_.push(classes.bold); // classes = ['red', 'bold']
-    }
-    console.log(classes)
     return (
-
       <div className={classes.App} >
-        <p className={classes_.join(' ')}>This is really working :D </p>
-        <button className={btnClass}
-          onClick={this.togglePersonHandler}>Click me</button>
+        <Cockpit
+          showPersons={this.state.showPersons}
+          persons={this.state.persons}
+          togglePersonHandler={this.togglePersonHandler}
+        />
         {persons}
       </div>
-
     );
   }
-  // return React.createElement('div', {className: 'App'}, React.createElement('h1', null, 'Does this work now?'));
 }
 
 export default App;

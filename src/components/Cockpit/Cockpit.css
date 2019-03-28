@@ -1,0 +1,31 @@
+.App {
+    text-align: center;
+  }
+  
+  .red {
+    color: red;
+  }
+  .bold {
+    font-weight: bold;
+  }
+  
+  .Cockpit button {
+    color: white;
+    background-color: green;
+    font: inherit;
+    border: 1px solid blue;
+    cursor: pointer;
+    padding: 8px;
+    width: 100px
+  }
+  .Cockpit button:hover {
+    background-color:  lightgreen;
+    color:black;
+  }
+  .ACockpitpp button.Red {
+    background-color: red;
+  }
+  .Cockpit button.Red:hover {
+    background-color: coral;
+    color:black;
+  }
