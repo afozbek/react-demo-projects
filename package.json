@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "radium": "^0.25.1",
     "react": "^16.8.0-alpha.1",
     "react-dom": "^16.8.0-alpha.1",
     "react-scripts": "^2.1.3"
