@@ -8,6 +8,10 @@
 # testing
 /coverage
 
+# Development
+/scripts
+/config
+
 # production
 /build
 
