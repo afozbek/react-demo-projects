@@ -37,7 +37,7 @@ const cockpit = props => {
     return (
         <div className={classes.Cockpit}>
             <h1>{props.title}</h1>
-            <p className={classes_.join(' ')}> Bolum7-->70.videoda kaldım </p>
+            <p className={classes_.join(' ')}> Bolum 7-->79.videoda kaldım </p>
             <button
                 className={btnClass}
                 onClick={props.togglePersonHandler}>Show Persons
