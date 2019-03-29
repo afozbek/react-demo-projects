@@ -1,7 +1,28 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import classes from './Cockpit.css';
 
 const cockpit = props => {
+
+    // If the second parameter changes use the {Effect}!
+    // If the second parameter is empty arr useEffect once!
+    useEffect(() => {
+        console.log('[Cockpit.js] useEffect');
+        // Http Requests..
+        // setTimeout(() => {
+        //     alert('Saved data to cloud!');
+        // }, 1000);
+        return () => {
+            console.log('[Cockpit.js] cleanup work in useEffect');
+        }
+    }, []);
+
+    useEffect(() => {
+        console.log('[Cockpit.js] 2nd useEffect');
+        return () => {
+            console.log('[Cockpit.js] cleanup work in useEffect');
+        };
+    });
+
     const classes_ = [];
     let btnClass = '';
     if (props.showPersons) {
