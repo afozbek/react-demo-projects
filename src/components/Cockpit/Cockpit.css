@@ -16,13 +16,13 @@
     border: 1px solid blue;
     cursor: pointer;
     padding: 8px;
-    width: 100px
+    width: 200px
   }
   .Cockpit button:hover {
     background-color:  lightgreen;
     color:black;
   }
-  .ACockpitpp button.Red {
+  .Cockpit button.Red {
     background-color: red;
   }
   .Cockpit button.Red:hover {

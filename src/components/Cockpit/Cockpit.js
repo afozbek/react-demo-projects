@@ -4,7 +4,9 @@ import classes from './Cockpit.css';
 const cockpit = props => {
     const classes_ = [];
     let btnClass = '';
-    if (props.showPerson) { btnClass = classes.Red; }
+    if (props.showPersons) {
+        btnClass = classes.Red;
+    }
     if (props.persons.length <= 2) {
         classes_.push(classes.red); // classes = ['red]
     }
@@ -13,10 +15,11 @@ const cockpit = props => {
     }
     return (
         <div className={classes.Cockpit}>
+            <h1>{props.title}</h1>
             <p className={classes_.join(' ')}> Bolum7-->70.videoda kaldım </p>
             <button
                 className={btnClass}
-                onClick={props.togglePersonHandler}>Click me
+                onClick={props.togglePersonHandler}>Show Persons
             </button>
         </div>
     )
