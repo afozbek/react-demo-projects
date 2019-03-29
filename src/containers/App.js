@@ -23,9 +23,9 @@ class App extends Component {
   }
 
   // will be removed
-  componentWillMount() {
-    console.log('[App.js] componentWillMount')
-  }
+  // componentWillMount() {
+  //   console.log('[App.js] componentWillMount')
+  // }
 
   componentDidMount() {
     console.log('[App.js] componentDidMount')
