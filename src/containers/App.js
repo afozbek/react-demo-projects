@@ -10,7 +10,7 @@ class App extends Component {
       { id: 'adadaerr', name: 'Sena', age: 29 },
       { id: 'adadfrt', name: 'Yunus', age: 26 }
     ],
-    showPersons: true
+    showPersons: false
   }
   onNameChange = (e, id) => {
     const personIndex = this.state.persons.findIndex(p => {
@@ -56,6 +56,7 @@ class App extends Component {
     return (
       <div className={classes.App} >
         <Cockpit
+          title={this.props.title}
           showPersons={this.state.showPersons}
           persons={this.state.persons}
           togglePersonHandler={this.togglePersonHandler}

@@ -8,7 +8,9 @@ const persons = props => props.persons.map((person, index) => {
             age={person.age}
             change={(e) => props.changed(e, person.id)}
             key={index}
-        >{person.id}</Person>
+        >
+            {person.id}
+        </Person>
     );
 });
 
