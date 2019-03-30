@@ -43,7 +43,7 @@ class Persons extends PureComponent {
                     click={() => this.props.clicked(index)}
                     name={person.name}
                     age={person.age}
-                    change={(e) => this.props.changed(e, person.id)}
+                    changed={(e) => this.props.changed(e, person.id)}
                     key={index}
                 >
                     {person.id}
