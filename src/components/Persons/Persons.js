@@ -1,11 +1,14 @@
 import React, { PureComponent } from 'react'
 import Person from './Person/Person';
+
+
 class Persons extends PureComponent {
     // static getDerivedStateFromProps(props, state) {
     //     console.log('[Persons.js] getDerivedStateFromProps');
     //     return state;
     // }
 
+    // With PureComponent we did not have to write shouldComponentUpdate
     // shouldComponentUpdate(nextProps, nextState) {
     //     console.log('[Persons.js] shouldComponentUpdate');
     //     if (
