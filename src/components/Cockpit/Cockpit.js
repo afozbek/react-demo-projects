@@ -1,13 +1,14 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useRef } from 'react'
 import classes from './Cockpit.css';
 
 const cockpit = props => {
-
+    const toggleBtnRef = useRef(null);
     // If the second parameter changes use the {Effect}!
     // If the second parameter is empty arr useEffect once!
     // Similar to componentDidMount and componentDidUpdate:
     useEffect(() => {
         console.log('[Cockpit.js] useEffect');
+        toggleBtnRef.current.click();
         // Http Requests..
         // setTimeout(() => {
         //     alert('Saved data to cloud!');
@@ -15,7 +16,7 @@ const cockpit = props => {
         return () => {
             console.log('[Cockpit.js] cleanup work in useEffect');
         }
-    }, [1, 2, 3]);
+    }, []);
 
     useEffect(() => {
         console.log('[Cockpit.js] 2nd useEffect');
@@ -40,6 +41,7 @@ const cockpit = props => {
             <h1>{props.title}</h1>
             <p className={classes_.join(' ')}> Bolum 7-->92.videoda kaldım </p>
             <button
+                ref={toggleBtnRef}
                 className={btnClass}
                 onClick={props.togglePersonHandler}>Show Persons
             </button>
