@@ -5,6 +5,7 @@ const cockpit = props => {
 
     // If the second parameter changes use the {Effect}!
     // If the second parameter is empty arr useEffect once!
+    // Similar to componentDidMount and componentDidUpdate:
     useEffect(() => {
         console.log('[Cockpit.js] useEffect');
         // Http Requests..
@@ -14,12 +15,12 @@ const cockpit = props => {
         return () => {
             console.log('[Cockpit.js] cleanup work in useEffect');
         }
-    }, []);
+    }, [1, 2, 3]);
 
     useEffect(() => {
         console.log('[Cockpit.js] 2nd useEffect');
         return () => {
-            console.log('[Cockpit.js] cleanup work in useEffect');
+            console.log('[Cockpit.js] cleanup work in 2nd useEffect');
         };
     });
 
@@ -37,7 +38,7 @@ const cockpit = props => {
     return (
         <div className={classes.Cockpit}>
             <h1>{props.title}</h1>
-            <p className={classes_.join(' ')}> Bolum 7-->79.videoda kaldım </p>
+            <p className={classes_.join(' ')}> Bolum 7-->86.videoda kaldım </p>
             <button
                 className={btnClass}
                 onClick={props.togglePersonHandler}>Show Persons
