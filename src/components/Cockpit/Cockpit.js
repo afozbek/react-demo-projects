@@ -1,19 +1,21 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useContext } from 'react'
 import classes from './Cockpit.css';
 
 import AuthContext from '../../context/auth-context';
 const cockpit = props => {
     const toggleBtnRef = useRef(null);
+
+    // setting context from useContext hook
+    const authContext = useContext(AuthContext);
+
     // If the second parameter changes use the {Effect}!
     // If the second parameter is empty arr useEffect once!
     // Similar to componentDidMount and componentDidUpdate:
     useEffect(() => {
         console.log('[Cockpit.js] useEffect');
+
         toggleBtnRef.current.click();
-        // Http Requests..
-        // setTimeout(() => {
-        //     alert('Saved data to cloud!');
-        // }, 1000);
+
         return () => {
             console.log('[Cockpit.js] cleanup work in useEffect');
         }
@@ -46,12 +48,7 @@ const cockpit = props => {
                 className={btnClass}
                 onClick={props.togglePersonHandler}>Show Persons
             </button>
-            <AuthContext.Consumer>
-                {context => <button onClick={context.login}>
-                    Log In
-                            </button>}
-            </AuthContext.Consumer>
-
+            <button onClick={authContext.login}> Log In</button>
         </div>
     )
 };
