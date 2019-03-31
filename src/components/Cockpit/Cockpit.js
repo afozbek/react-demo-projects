@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import classes from './Cockpit.css';
 
+import AuthContext from '../../context/auth-context';
 const cockpit = props => {
     const toggleBtnRef = useRef(null);
     // If the second parameter changes use the {Effect}!
@@ -39,12 +40,18 @@ const cockpit = props => {
     return (
         <div className={classes.Cockpit}>
             <h1>{props.title}</h1>
-            <p className={classes_.join(' ')}> Bolum 7-->92.videoda kaldım </p>
+            <p className={classes_.join(' ')}> Bolum 7-->94.videoda kaldım </p>
             <button
                 ref={toggleBtnRef}
                 className={btnClass}
                 onClick={props.togglePersonHandler}>Show Persons
             </button>
+            <AuthContext.Consumer>
+                {context => <button onClick={context.login}>
+                    Log In
+                            </button>}
+            </AuthContext.Consumer>
+
         </div>
     )
 };
