@@ -31,14 +31,15 @@ const reducer = (state = initialState, action) => {
         results: [
           ...state.results,
           {
-            id: new Date(),
+            id: Math.random() * 1000,
             value: state.counter
           }
         ]
       };
     case "DELETE_RESULT":
       return {
-        ...state
+        ...state,
+        results: state.results.filter(result => result.id !== action.id)
       };
     default:
       return state;
