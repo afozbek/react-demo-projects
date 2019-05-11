@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { createStore, combineReducers } from "redux";
+import { createStore, combineReducers, applyMiddleware, compose } from "redux";
 import { Provider } from "react-redux";
 
 import "./index.css";
@@ -13,12 +13,27 @@ const reducer = combineReducers({
   ctr: counterReducer,
   res: storeReducer
 });
+
+const logger = store => {
+  return next => {
+    return action => {
+      console.log("[Middleware] Dispatching", action);
+      const result = next(action);
+      console.log("[Middleware] next state", store.getState());
+      return result;
+    };
+  };
+};
+
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
 /* eslint-disable no-underscore-dangle */
 const store = createStore(
   reducer /* preloadedState, */,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  composeEnhancers(applyMiddleware(logger))
 );
 /* eslint-enable */
+
 const app = (
   <Provider store={store}>
     <App />
