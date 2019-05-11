@@ -27,11 +27,19 @@ export const add = value => {
     value: value
   };
 };
-export const storeResult = ctr => {
-  console.log(ctr);
+
+export const saveResult = ctr => {
   return {
     type: STORE_RESULT,
     ctr: ctr
+  };
+};
+
+export const storeResult = ctr => {
+  return dispatch => {
+    setTimeout(() => {
+      dispatch(saveResult(ctr));
+    }, 2000);
   };
 };
 export const deleteResult = id => {
