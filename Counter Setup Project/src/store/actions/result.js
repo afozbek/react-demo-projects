@@ -8,7 +8,7 @@ export const saveResult = ctr => {
 };
 
 export const storeResult = ctr => {
-  return dispatch => {
+  return (dispatch, getState) => {
     setTimeout(() => {
       dispatch(saveResult(ctr));
     }, 2000);
