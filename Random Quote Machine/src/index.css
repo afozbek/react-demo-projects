@@ -12,11 +12,22 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: red;
+  background-color: orange;
   height: 100vh;
 }
 
 #wrapper {
   position: relative;
   z-index: 2;
+}
+
+#footer {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: white;
+  text-align: center;
+}
+
+#footer a {
+  color: white;
 }
