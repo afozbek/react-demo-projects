@@ -10,7 +10,6 @@
 
 #text {
     font-size: 1.9rem;
-    color: orange;
     text-align: center;
 }
 
@@ -19,7 +18,6 @@
 }
 
 #author {
-    color: orange;
     font-weight: 300;
     margin-top: 1rem;
     font-size: 1rem;
@@ -40,16 +38,12 @@
     border: none;
     outline: none;
     border-radius: 3px;
-    background-color: orange;
     cursor: pointer;
-    color: white;
     height: 35px;
     text-align: center;
 }
 
-.button:hover {
-    background-color: #f19d02a3;
-}
+.button:hover {}
 
 #new-quote {
     font-size: 0.8rem;
