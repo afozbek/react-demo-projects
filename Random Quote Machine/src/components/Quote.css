@@ -1,17 +1,16 @@
 #quote-box {
     background-color: white;
-    font-size: 1.75rem;
-    width: 500px;
-    color: red;
+    width: 520px;
     border-radius: 3px;
-    padding: 45px 50px;
+    padding: 45px 55px;
     -webkit-box-shadow: -5px -1px 48px -14px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: -5px -1px 48px -14px rgba(0, 0, 0, 0.75);
     box-shadow: -5px -1px 48px -14px rgba(0, 0, 0, 0.75);
 }
 
 #text {
-    color: black;
+    font-size: 1.9rem;
+    color: orange;
     text-align: center;
 }
 
@@ -20,6 +19,7 @@
 }
 
 #author {
+    color: orange;
     font-weight: 300;
     margin-top: 1rem;
     font-size: 1rem;
@@ -38,12 +38,17 @@
     align-items: center;
     padding: 4px 17px;
     border: none;
+    outline: none;
     border-radius: 3px;
     background-color: orange;
     cursor: pointer;
     color: white;
     height: 35px;
     text-align: center;
+}
+
+.button:hover {
+    background-color: #f19d02a3;
 }
 
 #new-quote {
