@@ -9,7 +9,9 @@ import "./Quote.css";
 class Quote extends Component {
   state = {
     text: "",
-    author: ""
+    author: "",
+    color: "",
+    paragraph: ""
   };
 
   // Generate Random color
@@ -25,12 +27,10 @@ class Quote extends Component {
   // Get Quotes
   getQuote = () => {
     axios
-      .get(
-        "https://jsonplaceholder.typicode.com/posts/" +
-          Math.floor(Math.random() * 100)
-      )
+      .get("http://quotesondesign.com/wp-json/posts?filter[orderby]=rand")
       .then(res => {
-        const { title, body } = res.data;
+        // title->author | content->speech
+        const { title, content } = res.data[0];
 
         const color = this.randomColor();
 
@@ -38,9 +38,13 @@ class Quote extends Component {
         document.body.style.color = color;
         document.body.style.backgroundColor = color;
 
+        let regex = /(<p>|<\/p>)/g;
+
+        let newContent = content.replace(regex, "");
+
         this.setState({
-          text: body,
-          author: title.slice(1, 10),
+          text: newContent,
+          author: title,
           color: color
         });
       })
