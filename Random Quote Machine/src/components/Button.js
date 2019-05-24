@@ -1,8 +1,9 @@
 import React from "react";
+import PropTypes from "prop-types";
+
 import "./Quote.css";
 
 const button = props => {
-  console.log(props.isButton);
   if (props.isButton) {
     return (
       <button
@@ -27,6 +28,11 @@ const button = props => {
       {props.children}
     </a>
   );
+};
+
+button.propTypes = {
+  id: PropTypes.string.isRequired,
+  backgroundColor: PropTypes.string.isRequired
 };
 
 export default button;
