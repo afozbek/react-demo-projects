@@ -3,9 +3,8 @@ import "./Quote.css";
 
 const quote_author = props => {
   return (
-    <div id="author">
-      - {props.author}
-      {/* John Lennon */}
+    <div className="quote-author">
+      <span id="author">- {props.author} </span>
     </div>
   );
 };

@@ -3,12 +3,10 @@ import "./Quote.css";
 
 const quote_text = props => {
   return (
-    <div id="text">
+    <div className="quote-text">
       <i className="fas fa-quote-left" />
-      <span>
-        {props.text}
-        {/* Life is what happens to you while you’re busy making other plans. */}
-      </span>
+      <span id="text" dangerouslySetInnerHTML={{ __html: props.text }} />
+      {/* Life is what happens to you while you’re busy making other plans. */}
     </div>
   );
 };
