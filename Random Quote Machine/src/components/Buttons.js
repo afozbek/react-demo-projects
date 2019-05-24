@@ -1,22 +1,27 @@
 import React from "react";
+
+import Button from "./Button";
 import "./Quote.css";
 
 const buttons = props => {
   return (
     <div className="buttons">
-      <a
-        className="button"
+      <Button
         title="share_content"
-        rel="noopener noreferrer"
-        target="_blank"
         href="https://twitter.com/intent/tweet"
         id="tweet-quote"
+        backgroundColor={props.color}
       >
         <i className="fab fa-twitter" />
-      </a>
-      <button className="button" id="new-quote" onClick={props.clicked}>
+      </Button>
+      <Button
+        isButton
+        id="new-quote"
+        clicked={props.clicked}
+        backgroundColor={props.color}
+      >
         New Quote
-      </button>
+      </Button>
     </div>
   );
 };
