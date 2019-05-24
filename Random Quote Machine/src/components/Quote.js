@@ -12,6 +12,7 @@ class Quote extends Component {
     author: ""
   };
 
+  // Generate Random color
   randomColor = () => {
     let colorPatterns = "1234567890ABCDEF";
     let color = "#";
@@ -21,6 +22,7 @@ class Quote extends Component {
     return color;
   };
 
+  // Get Quotes
   getQuote = () => {
     axios
       .get(
@@ -32,16 +34,14 @@ class Quote extends Component {
 
         const color = this.randomColor();
 
+        // Change body's color dynmicly by reaching DOM
         document.body.style.color = color;
         document.body.style.backgroundColor = color;
-        document.getElementById("tweet-quote").style.color = "#fff";
-        document.getElementById("tweet-quote").style.backgroundColor = color;
-        document.getElementById("new-quote").style.color = "#fff";
-        document.getElementById("new-quote").style.backgroundColor = color;
 
         this.setState({
           text: body,
-          author: title.slice(1, 10)
+          author: title.slice(1, 10),
+          color: color
         });
       })
       .catch(err => console.log(err));
@@ -51,7 +51,6 @@ class Quote extends Component {
   }
 
   handleQuoteClick = () => {
-    console.log("Clickedd");
     this.getQuote();
   };
 
@@ -60,7 +59,7 @@ class Quote extends Component {
       <div id="quote-box" style={{ color: this.state.backgroundColor }}>
         <QuoteText text={this.state.text} />
         <QuoteAuthor author={this.state.author} />
-        <Buttons clicked={this.handleQuoteClick} />
+        <Buttons clicked={this.handleQuoteClick} color={this.state.color} />
       </div>
     );
   }
