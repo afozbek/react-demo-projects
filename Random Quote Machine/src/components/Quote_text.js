@@ -5,7 +5,10 @@ const quote_text = props => {
   return (
     <div id="text">
       <i className="fas fa-quote-left" />
-      <span>Winning isn’t everything, but wanting to win is.</span>
+      <span>
+        {props.text}
+        {/* Life is what happens to you while you’re busy making other plans. */}
+      </span>
     </div>
   );
 };
