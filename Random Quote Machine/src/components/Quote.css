@@ -1,5 +1,6 @@
 #quote-box {
     background-color: white;
+    text-align: center;
     width: 520px;
     border-radius: 3px;
     padding: 45px 55px;
@@ -8,16 +9,16 @@
     box-shadow: -5px -1px 48px -14px rgba(0, 0, 0, 0.75);
 }
 
-#text {
+.quote-text {
     font-size: 1.9rem;
     text-align: center;
 }
 
-#text span {
-    margin-left: 0.65rem;
+.quote-text i {
+    margin-right: 10px;
 }
 
-#author {
+.quote-author {
     font-weight: 300;
     margin-top: 1rem;
     font-size: 1rem;
@@ -25,7 +26,7 @@
 }
 
 .buttons {
-    margin-top: 1.5rem;
+    margin-top: 2rem;
     display: flex;
     justify-content: space-between;
 }
@@ -43,7 +44,6 @@
     text-align: center;
 }
 
-.button:hover {}
 
 #new-quote {
     font-size: 0.8rem;
