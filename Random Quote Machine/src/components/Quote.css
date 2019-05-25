@@ -9,6 +9,30 @@
     box-shadow: -5px -1px 48px -14px rgba(0, 0, 0, 0.75);
 }
 
+@media screen and (max-width: 600px) {
+
+
+    #quote-box {
+        padding: 40px 50px;
+        width: 400px;
+    }
+}
+
+
+@media screen and (max-width: 450px) {
+
+    html {
+        font-size: 14px
+    }
+
+
+    #quote-box {
+        padding: 30px 40px;
+        width: 300px;
+    }
+}
+
+
 .quote-text {
     font-size: 1.9rem;
     text-align: center;
