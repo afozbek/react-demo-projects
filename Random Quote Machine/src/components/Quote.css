@@ -10,28 +10,22 @@
 }
 
 @media screen and (max-width: 600px) {
-
-
     #quote-box {
         padding: 40px 50px;
         width: 400px;
     }
 }
 
-
 @media screen and (max-width: 450px) {
-
     html {
-        font-size: 14px
+        font-size: 14px;
     }
-
 
     #quote-box {
         padding: 30px 40px;
         width: 300px;
     }
 }
-
 
 .quote-text {
     font-size: 1.9rem;
@@ -68,7 +62,6 @@
     text-align: center;
 }
 
-
 #new-quote {
     font-size: 0.8rem;
 }
@@ -76,4 +69,28 @@
 #tweet-quote {
     width: 2.5rem;
     font-size: 1.2rem;
+}
+
+
+
+.fade-enter {
+    opacity: 0.01;
+    transform: scale(1.1);
+}
+
+.fade-enter-active {
+    opacity: 1;
+    transform: scale(1);
+    transition: all 300ms;
+}
+
+.fade-exit {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.fade-exit-active {
+    opacity: 0.01;
+    transform: scale(1.1);
+    transition: all 300ms;
 }
