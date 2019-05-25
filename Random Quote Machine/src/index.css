@@ -9,10 +9,10 @@
 
 body {
   font-family: 'Lato', sans-serif;
+  background-color: rgb(243, 156, 18);
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: orange;
   height: 100vh;
 }
 
