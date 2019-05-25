@@ -8,9 +8,10 @@ const buttons = props => {
     <div className="buttons">
       <Button
         title="share_content"
-        href="https://twitter.com/intent/tweet"
         id="tweet-quote"
         backgroundColor={props.color}
+        quote={props.quote}
+        author={props.author}
       >
         <i className="fab fa-twitter" />
       </Button>

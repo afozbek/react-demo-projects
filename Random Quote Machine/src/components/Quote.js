@@ -8,10 +8,10 @@ import "./Quote.css";
 
 class Quote extends Component {
   state = {
-    text: "",
-    author: "",
     color: "",
-    paragraph: ""
+    quotesData: [],
+    quote: "Güzel bir alıntı için aşağıdaki butona tıklayınız 😉",
+    author: "Abdullah Furkan Özbek"
   };
 
   // Generate Random color
@@ -25,12 +25,14 @@ class Quote extends Component {
   };
 
   // Get Quotes
-  getQuote = () => {
+  getQuotes = () => {
     axios
-      .get("http://quotesondesign.com/wp-json/posts?filter[orderby]=rand")
+      .get(
+        "https://gist.githubusercontent.com/camperbot/5a022b72e96c4c9585c32bf6a75f62d9/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc/quotes.json"
+      )
       .then(res => {
-        // title->author | content->speech
-        const { title, content } = res.data[0];
+        const quotesData = [...res.data.quotes];
+        console.log(quotesData);
 
         const color = this.randomColor();
 
@@ -38,32 +40,51 @@ class Quote extends Component {
         document.body.style.color = color;
         document.body.style.backgroundColor = color;
 
-        let regex = /(<p>|<\/p>)/g;
-
-        let newContent = content.replace(regex, "");
-
+        console.log("Setting Quotes");
         this.setState({
-          text: newContent,
-          author: title,
+          quotesData: quotesData,
           color: color
         });
       })
       .catch(err => console.log(err));
   };
+
   componentDidMount() {
-    this.getQuote();
+    if (this.state.quotesData.length > 0) {
+      return;
+    } else {
+      this.getQuotes();
+    }
   }
 
   handleQuoteClick = () => {
-    this.getQuote();
+    let randomIndex = Math.floor(Math.random() * 100);
+    let { quote, author } = this.state.quotesData[randomIndex];
+
+    const color = this.randomColor();
+
+    // Change body's color dynmicly by reaching DOM
+    document.body.style.color = color;
+    document.body.style.backgroundColor = color;
+
+    this.setState({
+      quote: quote,
+      author: author,
+      color: color
+    });
   };
 
   render() {
     return (
       <div id="quote-box" style={{ color: this.state.backgroundColor }}>
-        <QuoteText text={this.state.text} />
+        <QuoteText quote={this.state.quote} />
         <QuoteAuthor author={this.state.author} />
-        <Buttons clicked={this.handleQuoteClick} color={this.state.color} />
+        <Buttons
+          clicked={this.handleQuoteClick}
+          color={this.state.color}
+          quote={this.state.quote}
+          author={this.state.author}
+        />
       </div>
     );
   }

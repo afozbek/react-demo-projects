@@ -16,9 +16,14 @@ const button = props => {
       </button>
     );
   }
+
+  const href =
+    "https://twitter.com/intent/tweet?hashtags=quotes&related=afozbek&text=" +
+    encodeURIComponent('"' + props.quote + '" - ' + props.author);
+
   return (
     <a
-      href={props.href}
+      href={href}
       className="button"
       title={props.title}
       rel="noopener noreferrer"
