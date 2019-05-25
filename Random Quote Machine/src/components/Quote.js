@@ -8,7 +8,7 @@ import "./Quote.css";
 
 class Quote extends Component {
   state = {
-    color: "",
+    color: "rgb(243, 156, 18)",
     quotesData: [],
     quote: "Güzel bir alıntı için aşağıdaki butona tıklayınız 😉",
     author: "Abdullah Furkan Özbek"
@@ -77,8 +77,9 @@ class Quote extends Component {
   render() {
     return (
       <div id="quote-box" style={{ color: this.state.backgroundColor }}>
-        <QuoteText quote={this.state.quote} />
-        <QuoteAuthor author={this.state.author} />
+        <QuoteText quote={this.state.quote} color={this.state.color} />
+
+        <QuoteAuthor author={this.state.author} color={this.state.color} />
         <Buttons
           clicked={this.handleQuoteClick}
           color={this.state.color}
@@ -89,5 +90,4 @@ class Quote extends Component {
     );
   }
 }
-
 export default Quote;
