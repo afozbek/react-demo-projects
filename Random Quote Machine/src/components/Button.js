@@ -23,6 +23,7 @@ const button = props => {
 
   return (
     <a
+      id={props.id}
       href={href}
       className="button"
       title={props.title}
