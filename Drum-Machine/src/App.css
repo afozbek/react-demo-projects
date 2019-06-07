@@ -1,0 +1,102 @@
+#drum-machine {
+  display: flex;
+  width: 600px;
+  padding: 0.25rem;
+  border: 4px solid orange;
+  border-radius: 3px;
+  margin: 25% auto;
+}
+
+.buttons-container {
+  width: 63%;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.drum-pad {
+  display: flex;
+  justify-content: center;
+  flex: 0 0 30%;
+  align-items: center;
+  font-weight: bold;
+  border-radius: 4px;
+  margin: 5px;
+  text-align: center;
+  color: black;
+  height: 75px;
+  background-color: rgb(116, 111, 111);
+  -webkit-box-shadow: 10px 10px 12px -6px rgba(0, 0, 0, 0.67);
+  -moz-box-shadow: 10px 10px 12px -6px rgba(0, 0, 0, 0.67);
+  box-shadow: 10px 10px 12px -6px rgba(0, 0, 0, 0.67);
+}
+
+.operations-container {
+  width: 50%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.control {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.status-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 25px;
+  width: 50px;
+  background-color: black;
+  cursor: pointer;
+}
+.status {
+  text-align: center;
+  height: 81%;
+  width: 88%;
+  background-color: red;
+}
+
+#display {
+  width: 40%;
+  font-weight: bold;
+  border-radius: 4px;
+  padding: 15px 40px;
+  text-align: center;
+  background-color: rgb(83, 80, 80);
+}
+.volume {
+  width: 100%;
+  text-align: center;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 75%;
+  height: 15px;
+  border-radius: 4px;
+  background: #561da0;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  background: #c915b1;
+  cursor: pointer;
+}
