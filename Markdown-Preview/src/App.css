@@ -1,0 +1,11 @@
+.root-container {
+  display: flex;
+  padding: 20px;
+}
+@media screen and (max-width: 1000px) {
+  .root-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
