@@ -1,0 +1,228 @@
+$primary-color: #1e555c;
+@font-face {
+  font-family: "Digital";
+  src: url("assets/digital-7.regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Righteous";
+  src: url("assets/Righteous-Regular.ttf") format("truetype");
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  font-size: 16px;
+  @media screen and (max-width: 400px) {
+    font-size: 10px;
+  }
+
+  @media screen and (min-width: 401px) and (max-width: 600px) {
+    font-size: 12px;
+  }
+  @media screen and (min-width: 601px) and (max-width: 700px) {
+    font-size: 14px;
+  }
+}
+
+body {
+  background-color: $primary-color;
+  font-family: "Righteous", cursive;
+  color: white;
+  text-align: center;
+}
+
+svg {
+  font-size: 16px;
+}
+
+#root {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 100vh;
+}
+
+button {
+  outline: none;
+  color: white;
+  background-color: $primary-color;
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 0.4rem 0.7rem;
+  @media screen and (max-width: 600px) {
+    margin: 0.6rem 1rem;
+  }
+}
+
+.main-wrapper {
+  width: 31.5rem;
+  margin-top: 30px;
+  @media screen and (min-height: 700px) {
+    margin: 0;
+  }
+}
+
+.title {
+  text-align: center;
+  font-size: 3.1rem;
+  font-weight: 500;
+  margin-bottom: 1.1rem;
+  @media screen and (max-width: 600px) {
+    margin-bottom: 2rem;
+  }
+}
+
+.lengths {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0.4rem;
+  margin-bottom: 0.6rem;
+
+  @media screen and (max-width: 600px) {
+    margin-bottom: 1rem;
+  }
+
+  &__length {
+    width: 50%;
+    font-size: 1.8rem;
+
+    &__controls {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      margin-top: 0.4rem;
+    }
+  }
+}
+
+.timer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+
+  margin: 0.6rem auto;
+  width: 17rem;
+  border: 7px solid #13353a;
+  border-radius: 40px;
+
+  @media screen and (max-width: 600px) {
+    margin-bottom: 2rem;
+    width: 20rem;
+  }
+  @media screen and (min-width: 601px) and (max-width: 700px) {
+    width: 18rem;
+  }
+  .timer-wrapper {
+    margin: 1.2rem 0;
+
+    @media screen and (max-width: 600px) {
+      margin: 1.5rem 0;
+    }
+
+    #timer-label {
+      font-size: 1.8rem;
+    }
+
+    #time-left {
+      margin-top: 0.2rem;
+      font-family: "Digital", sans-serif;
+      font-size: 4.5rem;
+    }
+  }
+}
+
+.timer-control {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 1rem;
+
+  @media screen and (min-height: 700px) {
+    margin-top: 1.5rem;
+  }
+
+  button {
+    margin: 0 0.4rem;
+    @media screen and (max-width: 600px) {
+      margin: 0 0.6rem;
+    }
+  }
+
+  #start_stop {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 1.5rem;
+  font-size: 0.9rem;
+  letter-spacing: 1.5px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+
+  @media screen and (max-width: 600px) {
+    margin-top: 2.5rem;
+    font-size: 1.1rem;
+  }
+}
+.author a {
+  text-decoration: none;
+  color: #c54646;
+  margin-top: 0.1rem;
+  @media screen and (max-width: 600px) {
+    margin-top: 0.2rem;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+}
+.fade-in.visible {
+  transition: opacity 1s ease-in;
+  opacity: 1;
+}
