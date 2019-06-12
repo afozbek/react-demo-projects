@@ -1,0 +1,27 @@
+.editor-container {
+  display: inline-block;
+  width: 50%;
+  border-radius: 20%;
+}
+
+.editor-container textarea {
+  padding: 10px;
+  margin: 0;
+  width: 90%;
+  color: white;
+  background-color: black;
+  border-radius: 20px;
+  min-height: 250px;
+  outline: none;
+  resize: vertical;
+}
+
+@media screen and (max-width: 1000px) {
+  .editor-container {
+    margin: 30px 0;
+    width: 70%;
+  }
+  .editor-container textarea {
+    padding: 20px;
+  }
+}

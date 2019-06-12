@@ -1,0 +1,15 @@
+* {
+  padding: 0;
+  margin: 0;
+  background-color: rgb(163, 172, 163);
+}
+html,
+body {
+  height: 100%;
+}
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}

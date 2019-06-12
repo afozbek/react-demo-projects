@@ -1,0 +1,24 @@
+.preview-container {
+  text-align: start;
+  width: 50%;
+  border-radius: 3px;
+  -webkit-box-shadow: -1px 5px 61px -15px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: -1px 5px 61px -15px rgba(0, 0, 0, 0.75);
+  box-shadow: -1px 5px 61px -15px rgba(0, 0, 0, 0.75);
+}
+#preview {
+  padding: 10px;
+  font-size: 14px;
+  color: black;
+  background-color: white;
+  min-height: 250px;
+}
+
+@media screen and (max-width: 1000px) {
+  .preview-container {
+    width: 80%;
+  }
+  #preview {
+    padding: 20px;
+  }
+}
