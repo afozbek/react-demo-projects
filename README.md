@@ -6,7 +6,7 @@ My demo projects built in by React is in this repo.
 
 - [Blog Project](https://github.com/afozbek/React-Demo-Projects/tree/master/Blog)
 - [Cockpit](https://github.com/afozbek/React-Demo-Projects/tree/master/Cockpit)
-- [Counter Setup](https://github.com/afozbek/React-Demo-Projects/tree/master/)
+- [Counter Setup](https://github.com/afozbek/React-Demo-Projects/tree/master/Counter%20Setup)
 - [Drum Machine](https://github.com/afozbek/React-Demo-Projects/tree/master/Drum%20Machine)
 - [Javascript Calculator](https://github.com/afozbek/React-Demo-Projects/tree/master/Javascript%20Calculator)
 - [Markdown Preview](https://github.com/afozbek/React-Demo-Projects/tree/master/Markdown%20Preview)
