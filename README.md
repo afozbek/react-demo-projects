@@ -37,10 +37,17 @@ You can also update the packages by `yarn update` and `npm update`
 * Much More..
 
 
-## Authors
+## Contributing
 
-* **Abdullah Furkan Özbek** - *Software Developer* - [afozbek](https://github.com/afozbek)
+- If you have problems please leave an `issue` from [here](https://github.com/afozbek/react-demo-projects/issues)
+- Consider forking the project and submitting new `pull requests`. I am much likely control [my github account](https://github.com/afozbek).
 
+## You can reach out 😊😊
+If you are learning react and got stuck feel free to contact me about the projects or the problems 😉
+
+[![Linkedin Badge](https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/afozbek/)
+[![Mail Badge](https://img.shields.io/badge/furkanozbek1995@gmail.com-c14438?style=for-the-badge&logo=Gmail&logoColor=white&link=mailto:furkanozbek1995@gmail.com)](mailto:furkanozbek1995@gmail.com)
+[![Mail Badge](https://img.shields.io/badge/twitter-%230077B5.svg?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/afozbek_)
 
 ## License
 
