@@ -43,11 +43,12 @@ You can also update the packages by `yarn update` and `npm update`
 - Consider forking the project and submitting new `pull requests`. I am much likely control [my github account](https://github.com/afozbek).
 
 ## You can reach out 😊😊
-If you are learning react and got stuck feel free to contact me about the projects or the problems 😉
+Feel free to contact me about the problems. I will try to help as much as I can 😉
 
 [![Linkedin Badge](https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/afozbek/)
-[![Mail Badge](https://img.shields.io/badge/furkanozbek1995@gmail.com-c14438?style=for-the-badge&logo=Gmail&logoColor=white&link=mailto:furkanozbek1995@gmail.com)](mailto:furkanozbek1995@gmail.com)
-[![Mail Badge](https://img.shields.io/badge/twitter-%230077B5.svg?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/afozbek_)
+[![Mail Badge](https://img.shields.io/badge/email-c14438?style=for-the-badge&logo=Gmail&logoColor=white&link=mailto:furkanozbek1995@gmail.com)](mailto:furkanozbek1995@gmail.com)
+[![Twitter Badge](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/afozbek_)
+[![Github Badge](https://img.shields.io/badge/github-333?style=for-the-badge&logo=github&logoColor=white)](https://github.com/afozbek)
 
 ## License
 
