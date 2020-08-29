@@ -17,6 +17,7 @@ My demo projects built in by React is in this repo.
 - [Simple Routing](https://github.com/afozbek/React-Demo-Projects/tree/master/Simple%20Routing)
 - [Songs](https://github.com/afozbek/React-Demo-Projects/tree/master/Songs)
 - [Todos](https://github.com/afozbek/React-Demo-Projects/tree/master/Todos)
+- [Password Generator](https://github.com/afozbek/React-Demo-Projects/tree/master/Password%20Generator)
 
 ### Prerequisites
 
