@@ -1,0 +1,364 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: 1.5px dotted #212121; // FF, IE and Edge
+  outline: 5px auto -webkit-focus-ring-color; // Chrome, Safari and Opera
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 0;
+}
+
+.o-app {
+  max-width: 550px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+
+  &__main {
+    position: relative;
+    margin-bottom: 10px;
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    margin-top: 10px;
+
+    @media screen and (max-width: 500px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: stretch;
+    }
+  }
+
+  &__itemLeft {
+    @media screen and (max-width: 500px) {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__downloadDataBtn {
+    display: none;
+    cursor: pointer;
+    height: 25px;
+    font-size: 12px;
+    background: rgba(74, 74, 189, 0.91);
+    border-color: rgba(74, 74, 189, 0.91);
+    padding: 5px;
+    color: white;
+    border-radius: 3px;
+    text-decoration: none;
+    transition: opacity 0.8s;
+  }
+
+  &__todoToggleBtn {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 20px;
+    background: none;
+    cursor: pointer;
+    border: none;
+    color: #e6e6e6;
+    transform: rotate(90deg);
+    padding: 0;
+    height: 50px;
+    width: 50px;
+    transition: color .5s;
+
+    &.-visible {
+      display: inline-block;
+    }
+
+    &.-toggled {
+      color: #5f5f5f;
+    }
+  }
+
+  &__itemLeft {
+    text-align: start;
+    width: 30%;
+  }
+
+  &__filterBtnContainer {
+    display: flex;
+    justify-content: space-between;
+    flex: 1;
+  }
+
+  &__filterBtn {
+    padding: 5px;
+    cursor: pointer;
+
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background: #fff;
+
+    &:hover, &:focus, &[data-selected=true] {
+      color: #fff;
+      border-color:rgba(74,74,189,.91);
+      background: rgba(74,74,189,.91);
+    }
+  }
+
+  &__infoMsg {
+    text-align: justify;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin-bottom: 10px;
+
+    &.-author {
+      text-align: center;
+      margin-top: .1rem;
+
+      a {
+        text-decoration: none;
+        color: #c54646;
+      }
+    }
+  }
+}
+
+.m-todo {
+  position: relative;
+  width: 80%;
+  margin: 20px auto;
+
+  @media screen and (max-width: 500px) {
+    width: 90%;
+  }
+
+  &__input {
+    width: 100%;
+    height: 50px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 15px;
+    padding-left: 45px;
+    font-size: 17px;
+    cursor: pointer;
+
+    &::placeholder {
+      font-size: 15px;
+    }
+  }
+
+  &__list {
+    width: 100%;
+    text-align: start;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 3px;
+    margin-bottom: 10px;
+
+    @media screen and (max-width: 500px) {
+      padding: 10px 0;
+    }
+  }
+
+  &__item {
+    color: #333;
+    list-style: none;
+    margin-bottom: 5px;
+    text-align: justify;
+    position: relative;
+    font-size: 17px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+    word-break: break-all;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:hover {
+      .m-todo__btn {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+  }
+
+  &__checkbox {
+    width: 0;
+    height: 0;
+    opacity: 0;
+
+    &:focus + .m-todo__label {
+        $focus-ring-color: #212121;
+        outline: 2px dotted $focus-ring-color; // FF, IE and Edge
+        outline: 5px auto -webkit-focus-ring-color; // Chrome, Safari and Opera
+    }
+
+    &.-done + .m-todo__label{
+      &::after {
+        content: attr(data-content);
+        position: absolute;
+        top: 2px;
+        left: 4px;
+        color: rgba(74,74,189,.91);
+        font-family: monospace;
+        font-size: 14px;
+      }
+    }
+
+    &.-done ~ .m-todo__desc {
+      color: #888;
+      text-decoration: line-through;
+    }
+  }
+
+  &__label {
+    position: relative;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin-right: .3125rem;
+    border: 1px solid #ccc;
+    background: #fff;
+    border-color: #ccc;
+    vertical-align: middle;
+    border-radius: 3px;
+    cursor: pointer;
+
+    &:hover {
+      border-color: rgba(74,74,189,.91);
+    }
+  }
+
+  &__editInput {
+    display: none;
+    width: 70%;
+    height: 30px;
+    font-size: 16px;
+    margin-right: auto;
+
+    &.-editing {
+      display: block;
+    }
+  }
+
+  &__desc {
+    width: 70%;
+
+    &.-editing {
+      display: none;
+    }
+
+    @media screen and (max-width: 500px){
+      width: 50%;
+    }
+  }
+
+  &__btn {
+    visibility: hidden;
+    opacity: 0;
+    background: #fff;
+    cursor: pointer;
+    width: 100px;
+    height: 25px;
+    font-size: 12px;
+    color: white;
+    border-radius: 3px;
+    text-decoration: none;
+
+    transition: opacity 0.8s;
+
+    &.-remove {
+      border: none;
+      color: #b70a0a;
+      font-size: 20px;
+      max-width: 30px;
+    }
+
+    &.-edit {
+      border: none;
+      color: #4e6eb7;
+      font-size: 20px;
+      max-width: 30px;
+    }
+  }
+}
+
+.m-modal {
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.3);
+
+  &__container {
+    position: relative;
+
+    background: #fff;
+    padding: 30px 20px;
+    border-radius: 5px;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-top: 100px;
+  }
+
+  &__header {
+    margin-bottom: 20px;
+  }
+
+  &__closeBtn {
+    position: absolute;
+    cursor: pointer;
+    top: 0px;
+    right: 10px;
+    font-size: 30px;
+    background: none;
+    border: none;
+  }
+
+  &__infoMsg {
+    margin-bottom: 20px;
+  }
+
+  &__todoInput {
+    width: 100%;
+    height: 50px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    padding: 15px;
+    padding-left: 45px;
+    font-size: 17px;
+    margin-bottom: 10px;
+    cursor: pointer;
+
+    &::placeholder {
+      font-size: 15px;
+    }
+  }
+
+  &__updateBtn {
+    width: 30%;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+
+    &:hover, &:focus {
+      color: #fff;
+      border-color:rgba(74,74,189,.91);
+      background: rgba(74,74,189,.91);
+    }
+  }
+}
