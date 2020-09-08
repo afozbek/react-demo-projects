@@ -19,6 +19,9 @@ My demo projects built in by React is in this repo.
 - [Todo App](https://github.com/afozbek/React-Demo-Projects/tree/master/Todo%20App)
 - [Reddit App](https://github.com/afozbek/React-Demo-Projects/tree/master/Reddit%20Project)
 - [Password Generator](https://github.com/afozbek/React-Demo-Projects/tree/master/Password%20Generator)
+- [Performance Metrics](https://github.com/afozbek/React-Demo-Projects/tree/master/Performance%20Metrics)
+- [Breaking Bad Characters](https://github.com/afozbek/React-Demo-Projects/tree/master/Breaking%20Bad%20Characters)
+- [Movie List App](https://github.com/afozbek/movie-tracker-frontend)
 
 ### Prerequisites
 
@@ -30,14 +33,12 @@ Please run `yarn install` or `npm install` to get required packages
 
 You can also update the packages by `yarn update` and `npm update`
 
-
 ## Built With
 
-* [React](http://reactjs.org/) - Javascript Library for creating UI
-* [React-Router](https://reacttraining.com/react-router/web)
-* [Redux](https://redux.js.org/) - A predictable state container for JavaScript apps.
-* Much More..
-
+- [React](http://reactjs.org/) - Javascript Library for creating UI
+- [React-Router](https://reacttraining.com/react-router/web)
+- [Redux](https://redux.js.org/) - A predictable state container for JavaScript apps.
+- Much More..
 
 ## Contributing
 
@@ -45,6 +46,7 @@ You can also update the packages by `yarn update` and `npm update`
 - Consider forking the project and submitting new `pull requests`. I am much likely control [my github account](https://github.com/afozbek).
 
 ## You can reach out 😊😊
+
 Feel free to contact me about the problems. I will try to help as much as I can 😉
 
 [![Linkedin Badge](https://img.shields.io/badge/linkedin-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/afozbek/)
@@ -58,5 +60,5 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgments
 
-* Getting Better at React
-* Learning new stuffs
+- Getting Better at React
+- Learning new stuffs
