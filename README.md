@@ -22,7 +22,7 @@ My demo projects built in by React is in this repo.
 - [Performance Metrics](https://github.com/afozbek/React-Demo-Projects/tree/master/Performance%20Metrics)
 - [Breaking Bad Characters](https://github.com/afozbek/React-Demo-Projects/tree/master/Breaking%20Bad%20Characters)
 - [Movie List App](https://github.com/afozbek/movie-tracker-frontend)
-- [(Still In Dev...)SSR Reddit App (More Advanced Techologies Used)](https://github.com/afozbek/reddit-frontend)
+- [SSR Reddit App (More Advanced Techologies Used)](https://github.com/afozbek/reddit-frontend)
 
 ### Prerequisites
 
