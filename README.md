@@ -23,7 +23,7 @@ My demo projects built in by React is in this repo.
 - [Breaking Bad Characters](https://github.com/afozbek/React-Demo-Projects/tree/master/Breaking%20Bad%20Characters)
 - [Movie List App](https://github.com/afozbek/movie-tracker-frontend)
 - [SSR Reddit App (More Advanced Techologies Used)](https://github.com/afozbek/reddit-frontend)
-- [Faq Accordion](https://github.com/afozbek/Faq-Accordion)
+- [Faq Accordion](https://github.com/afozbek/React-Demo-Projects/tree/master/Faq-Accordion)
 
 ### Prerequisites
 
