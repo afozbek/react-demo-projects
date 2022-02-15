@@ -24,6 +24,8 @@ My demo projects built in by React is in this repo.
 - [Movie List App](https://github.com/afozbek/movie-tracker-frontend)
 - [SSR Reddit App (More Advanced Techologies Used)](https://github.com/afozbek/reddit-frontend)
 - [Faq Accordion](https://github.com/afozbek/React-Demo-Projects/tree/master/Faq-Accordion)
+- [Contact Holder Dapp](https://github.com/afozbek/contact-holder-dapp) -> **Full Stack Smart Contract Project**
+- [Hodl Banking Dapp](https://github.com/afozbek/hodl-banking-dapp) -> **Full Stack Smart Contract Project**
 
 ### Prerequisites
 
