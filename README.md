@@ -15,7 +15,7 @@ My demo projects built in by React is in this repo.
 - [Recipe App](https://github.com/afozbek/React-Demo-Projects/tree/master/Recipe%20App)
 - [Redux Dummy User](https://github.com/afozbek/React-Demo-Projects/tree/master/Redux%20Dummy%20User)
 - [Simple Routing](https://github.com/afozbek/React-Demo-Projects/tree/master/Simple%20Routing)
-- [Songs](https://github.com/afozbek/React-Demo-Projects/tree/master/Songs)
+- [Songs](https://github.com/afozbek/react-demo-projects/tree/master/Songs%20Project)
 - [Todo App](https://github.com/afozbek/React-Demo-Projects/tree/master/Todo%20App)
 - [Reddit App](https://github.com/afozbek/React-Demo-Projects/tree/master/Reddit%20Project)
 - [Password Generator](https://github.com/afozbek/React-Demo-Projects/tree/master/Password%20Generator)
